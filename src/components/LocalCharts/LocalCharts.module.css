@@ -1,8 +1,4 @@
-body{
-     background-color: rgb(250,250,250) 
-}
-
-.container {
+.chartsContainer {
     display: flex;
     flex-direction: column;
     align-items:center;

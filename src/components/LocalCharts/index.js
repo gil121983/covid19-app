@@ -30,7 +30,7 @@ class LocalCharts extends React.Component {
     const { data, country } = this.state;
     return (
       <React.Fragment>
-        <div className={styles.container}>
+        <div className={styles.chartsContainer}>
           <CountryPicker handleCountryChange={this.handleCountryChange} />
           <Charts data={data} country={country} />
           <Cards data={data} />

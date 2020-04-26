@@ -30,7 +30,7 @@ export default function Map() {
   }, [mapData]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.mapContainer}>
       <MapGL
         {...viewport}
         width="100%"
