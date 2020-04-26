@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Layout from "./components/Layout/index";
@@ -9,8 +9,7 @@ import LocalCharts from "./components/LocalCharts/index";
  
 // ./node_modules/.bin/json-server --watch store.json --port 3004
 
-export class App extends Component {
-  render() {
+export const App = () => {
     return (
       <BrowserRouter>
       <CssBaseline/>
@@ -23,7 +22,7 @@ export class App extends Component {
         </Layout>
       </BrowserRouter>
     );
-  }
+  
 }
 
 export default App;

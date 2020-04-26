@@ -25,10 +25,6 @@ export default function Map() {
     fetchAPI();
   }, []);
 
-  useEffect(() => {
-    console.log(mapData);
-  }, [mapData]);
-
   return (
     <div 
     // className={styles.mapContainer}
