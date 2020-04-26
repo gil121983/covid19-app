@@ -1,0 +1,21 @@
+.AppLogo {
+    height: auto;
+    width:auto;
+    pointer-events: none;
+    /* border:0.2rem solid red; */
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .AppLogo {
+      animation: AppLogo-spin infinite 10s linear;
+    }
+  }
+
+  @keyframes AppLogo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
