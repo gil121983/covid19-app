@@ -17,7 +17,7 @@ import PublicTwoToneIcon from '@material-ui/icons/PublicTwoTone';
 import PollTwoToneIcon from '@material-ui/icons/PollTwoTone';
 import TableChartTwoToneIcon from '@material-ui/icons/TableChartTwoTone';
 
-import styles from './Layout.module.css'
+// import styles from './Layout.module.css'
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -156,7 +156,7 @@ function Layout(props) {
           </IconButton>
           <Typography variant="h5" noWrap>
            <div style={{display:'flex'}}>
-            C<div className={styles.AppLogo}><i className="fas fa-virus"/></div>VID-19 Tracker
+            {/* C<div className={styles.AppLogo}><i className="fas fa-virus"/></div>VID-19 Tracker */}
             </div>
           </Typography>
            

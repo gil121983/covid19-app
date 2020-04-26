@@ -17,8 +17,8 @@ export class App extends Component {
         <Layout >
           <Switch>
             <Route exact path="/covid19-app" render={() => <h1>HOME</h1>} />
-            <Route path="/map" render={(props) => <GlobalCharts {...props} Component={GlobalCharts} />} />
-            <Route path="/charts" render={(props) => <LocalCharts {...props} />} component={LocalCharts}/>
+            <Route path="/map" render={(props) => <GlobalCharts {...props}  />} />
+            <Route path="/charts" render={(props) => <LocalCharts {...props} />}/>
           </Switch>
         </Layout>
       </BrowserRouter>

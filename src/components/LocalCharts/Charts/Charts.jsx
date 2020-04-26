@@ -10,9 +10,9 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
     const fetchAPI = async () => {
       setDailyData(await fetchDailyData());
     };
-
+    
     fetchAPI();
-  });
+  },[]);
 
   const lineChart = dailyData.length ? (
     <Line
