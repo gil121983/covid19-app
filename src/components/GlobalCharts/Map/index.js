@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MapGL, { Marker, Popup } from "react-map-gl";
-import styles from "./Map.module.css";
+// import styles from "./Map.module.css";
 import RadioButtonCheckedTwoToneIcon from "@material-ui/icons/RadioButtonCheckedTwoTone";
 import { fetchMapData } from "../../../api";
 import CountUp from "react-countup";
@@ -30,7 +30,9 @@ export default function Map() {
   }, [mapData]);
 
   return (
-    <div className={styles.mapContainer}>
+    <div 
+    // className={styles.mapContainer}
+    >
       <MapGL
         {...viewport}
         width="100%"
