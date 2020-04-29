@@ -3,11 +3,11 @@ import Map from "./Map";
 
 const GlobalCharts = () => {
   return (
-    <>
+    <React.Fragment>
       <div>
         <Map />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
