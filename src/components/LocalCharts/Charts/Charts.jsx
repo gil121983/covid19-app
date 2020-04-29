@@ -64,9 +64,11 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
   ) : null;
 
   return (
+    <React.Fragment>
     <div 
     // className={styles.chartContainer}
     >{country ? barChart : lineChart}</div>
+    </React.Fragment>
   );
 };
 

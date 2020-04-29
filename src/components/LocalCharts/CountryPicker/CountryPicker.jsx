@@ -13,6 +13,7 @@ const CountryPicker = ({handleCountryChange}) => {
   }, [setFetchedCountries]);
 
   return (
+    <React.Fragment>
     <FormControl>
       <NativeSelect  defaultValue='' onChange={(e)=>handleCountryChange(e.target.value)}>
         <option value="global">Global</option>
@@ -21,6 +22,7 @@ const CountryPicker = ({handleCountryChange}) => {
         ))}
       </NativeSelect>
     </FormControl>
+    </React.Fragment>
   );
 };
 

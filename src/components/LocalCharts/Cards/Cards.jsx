@@ -11,6 +11,7 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
     }
     
     return (
+        <React.Fragment>
         <div 
         // className = {styles.cardContainer}
         >
@@ -57,6 +58,8 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
 
              </Grid>
         </div>
+
+        </React.Fragment>
     )
 }
 

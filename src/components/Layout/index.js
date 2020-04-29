@@ -139,6 +139,7 @@ function Layout(props) {
   );
 
   return (
+    <React.Fragment>
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
@@ -195,15 +196,10 @@ function Layout(props) {
         {children}
       </main>
     </div>
+    </React.Fragment>
   );
 }
 
-Layout.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  container: PropTypes.any,
-};
+
 
 export default compose(withRouter, withStyles(useStyles))(Layout);
