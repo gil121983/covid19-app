@@ -5,7 +5,7 @@ import RadioButtonCheckedTwoToneIcon from "@material-ui/icons/RadioButtonChecked
 import { fetchMapData } from "../../../api";
 import CountUp from "react-countup";
 
-const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+const MAPBOX_TOKEN = "pk.eyJ1IjoiZ2lsc3RvIiwiYSI6ImNrOWZuM3BldTBkMGczb283Zzk2ejN5dGIifQ.3nQhzJkUGDQw8vcE03_6xQ";
 
 export default function Map() {
   const [mapData, setMapData] = useState([]);
