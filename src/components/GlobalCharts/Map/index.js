@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MapGL, { Marker, Popup } from "react-map-gl";
-// import styles from "./Map.module.css";
+import styles from "./Map.module.css";
 import RadioButtonCheckedTwoToneIcon from "@material-ui/icons/RadioButtonCheckedTwoTone";
 import { fetchMapData } from "../../../api";
 import CountUp from "react-countup";
@@ -27,12 +27,12 @@ export default function Map() {
 
   return (
     <div 
-    // className={styles.mapContainer}
+     className={styles.mapContainer}
     >
       <MapGL
         {...viewport}
         width="100%"
-        height="100vh"
+        height="75vh"
         mapStyle="mapbox://styles/mapbox/light-v9"
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapboxApiAccessToken={MAPBOX_TOKEN}

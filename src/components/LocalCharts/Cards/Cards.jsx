@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
-// import styles from './Cards.module.css';
-// import cx from 'classnames';
+import styles from './Cards.module.css';
+import cx from 'classnames';
 
 const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
      
@@ -13,12 +13,12 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
     return (
         <React.Fragment>
         <div 
-        // className = {styles.cardContainer}
+        className = {styles.cardContainer}
         >
             <Grid container spacing={3} justify="center">
             
             <Grid item component={Card}  sm={12} md={3} 
-            // className={cx(styles.dataCard, styles.infected)}
+            className={cx(styles.dataCard, styles.infected)}
             >
                 <CardContent>
                     <Typography color='textSecondary' gutterBottom> Infected</Typography>
@@ -26,12 +26,12 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
                         <CountUp start={0} end={confirmed.value} duration={2.5} separator=','/>
                     </Typography>
                     <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-                    <Typography varient='body2'>number of active cases of COVID-19</Typography>
+                    
                 </CardContent>
             </Grid>
             
             <Grid item component={Card}  sm={12} md={3} 
-            // className={cx(styles.dataCard, styles.recovered)}
+            className={cx(styles.dataCard, styles.recovered)}
             >
                 <CardContent>
                     <Typography color='textSecondary' gutterBottom> Recoveries</Typography>
@@ -39,12 +39,12 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
                         <CountUp start={0} end={recovered.value} duration={2.5} separator=','/>
                     </Typography>
                     <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-                    <Typography varient='body2'>number of recoveries from COVID-19</Typography>
+                  
                 </CardContent>
             </Grid>
             
             <Grid item component={Card} sm={12} md={3} 
-            // className={cx(styles.dataCard, styles.deaths)}
+            className={cx(styles.dataCard, styles.deaths)}
             >
                 <CardContent>
                     <Typography color='textSecondary' gutterBottom> Deaths</Typography>
@@ -52,7 +52,7 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
                         <CountUp start={0} end={deaths.value} duration={2.5} separator=','/>
                     </Typography>
                     <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography>
-                    <Typography varient='body2'> number of  deaths from COVID-19 </Typography>
+                  
                 </CardContent>
             </Grid>
 
