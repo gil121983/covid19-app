@@ -23,8 +23,11 @@ export default function Map() {
       setMapData(await fetchMapData());
     };
     fetchAPI();
+    
+    
   }, []);
 
+  useEffect(()=>console.log(mapData))
   return (
     <div 
      className={styles.mapContainer}

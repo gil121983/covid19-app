@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 
 import GlobalCharts from "../GlobalCharts";
 import LocalCharts from "../LocalCharts";
-
+import About from '../About'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -80,11 +80,7 @@ export default function FullWidthTabs() {
           <Tab label="about" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
+\
         <TabPanel value={value} index={0} dir={theme.direction}>
           <GlobalCharts/>
         </TabPanel>
@@ -92,9 +88,9 @@ export default function FullWidthTabs() {
           <LocalCharts/>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+         <About/>
         </TabPanel>
-      </SwipeableViews>
+
     </div>
   );
 }
