@@ -30,8 +30,8 @@ class LocalCharts extends React.Component {
       <React.Fragment>
         <div className={styles.chartsContainer}>
           <CountryPicker handleCountryChange={this.handleCountryChange} />
-          <Charts data={data} country={country} />
           <Cards data={data} />
+          <Charts data={data} country={country} />
         </div>
       </React.Fragment>
     );

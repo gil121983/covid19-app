@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -8,9 +7,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-import GlobalCharts from "../GlobalCharts";
+
 import LocalCharts from "../LocalCharts";
 import About from '../About'
+import Map from '../Map';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -23,8 +23,9 @@ function TabPanel(props) {
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
+      
     >
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && <Box p={0}>{children}</Box>}
     </Typography>
   );
 }
@@ -59,10 +60,6 @@ export default function FullWidthTabs() {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
   return (
     <div className={classes.root}>
 
@@ -80,9 +77,8 @@ export default function FullWidthTabs() {
           <Tab label="about" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-\
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <GlobalCharts/>
+          <Map/>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <LocalCharts/>
