@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import MapGL, { Marker, Popup } from "react-map-gl";
 import styles from "./Map.module.css";
 import RadioButtonCheckedTwoToneIcon from "@material-ui/icons/RadioButtonCheckedTwoTone";
-import { fetchMapData } from "../../../api";
+import { fetchMapData } from "../../api";
 import CountUp from "react-countup";
 
-const MAPBOX_TOKEN = "pk.eyJ1IjoiZ2lsc3RvIiwiYSI6ImNrOWZuM3BldTBkMGczb283Zzk2ejN5dGIifQ.3nQhzJkUGDQw8vcE03_6xQ";
+const MAPBOX_TOKEN = "pk.eyJ1IjoiZ2lsc3RvIiwiYSI6ImNrOWZuZXk0YTBjenMzZ285MTh1Y2p4ZGMifQ.bH4As5E3ySxuv2xh6ApdNw";
 
 export default function Map() {
   const [mapData, setMapData] = useState([]);
@@ -23,19 +23,16 @@ export default function Map() {
       setMapData(await fetchMapData());
     };
     fetchAPI();
-    
-    
   }, []);
 
-  useEffect(()=>console.log(mapData))
   return (
     <div 
-     className={styles.mapContainer}
+    className={styles.mapContainer}
     >
       <MapGL
         {...viewport}
-        width="100%"
-        height="75vh"
+        width="100vw"
+        height="82vh"
         mapStyle="mapbox://styles/mapbox/light-v9"
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapboxApiAccessToken={MAPBOX_TOKEN}
@@ -44,7 +41,7 @@ export default function Map() {
         }}
       >
         {mapData.map((item, i) => {
-          const opacity = item.stats.confirmed > 2000 ? 0.6 : 1;
+          const opacity = item.stats.confirmed > 4000 ? 0.6 : 1;
         return(
           <Marker
             key={i}
